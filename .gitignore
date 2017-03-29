@@ -20,6 +20,9 @@
 *.tar.gz
 *.rar
 
-/.idea
-/target
+/.idea/
 /spring-boot-demo-mybatis-druid.iml
+/target/
+
+将删除 .gitignore
+将删除 src/test/
