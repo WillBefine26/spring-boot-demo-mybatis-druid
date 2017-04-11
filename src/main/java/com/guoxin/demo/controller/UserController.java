@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * Created by guoxin on 17-3-29.
  */
@@ -26,7 +28,7 @@ public class UserController {
         if (id == null){
             return "fail";
         }
-        int delete = userMapper.delete(id);
+        int delete = userMapper.deleteByPrimaryKey(id);
         return String.valueOf(delete);
     }
 
@@ -35,7 +37,13 @@ public class UserController {
         if (user== null){
             return "fail";
         }
-        User update = userMapper.update(user);
-        return update.toString();
+        int update = userMapper.updateByPrimaryKey(user);
+        return String.valueOf(update);
+    }
+
+    @GetMapping(value = "/user/",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public List<User> select(){
+        List<User> select = userMapper.select();
+        return select;
     }
 }

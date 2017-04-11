@@ -10,7 +10,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
  * Created by guoxin on 17-3-20.
  */
 @SpringBootApplication
-@MapperScan(basePackages = "com.guoxin.demo.mapper")
+@MapperScan(basePackages = "com.guoxin.demo")
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {

@@ -1,19 +1,31 @@
 package com.guoxin.demo.mapper;
 
 import com.guoxin.demo.model.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
+import com.guoxin.demo.model.UserExample;
+import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
-
-/**
- * Created by guoxin on 17-3-29.
- */
 public interface UserMapper {
+    long countByExample(UserExample example);
 
-    int insert(User user);
+    int deleteByExample(UserExample example);
 
-    int delete(int id);
+    int deleteByPrimaryKey(Integer id);
 
-    User update(User user);
+    int insert(User record);
+
+    int insertSelective(User record);
+
+    List<User> selectByExample(UserExample example);
+
+    List<User> select();
+    User selectByPrimaryKey(Integer id);
+
+    int updateByExampleSelective(@Param("record") User record, @Param("example") UserExample example);
+
+    int updateByExample(@Param("record") User record, @Param("example") UserExample example);
+
+    int updateByPrimaryKeySelective(User record);
+
+    int updateByPrimaryKey(User record);
 }
