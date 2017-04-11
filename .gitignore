@@ -20,7 +20,7 @@
 *.tar.gz
 *.rar
 
-/.idea/
+/.idea
 /spring-boot-demo-mybatis-druid.iml
 /target/
 
