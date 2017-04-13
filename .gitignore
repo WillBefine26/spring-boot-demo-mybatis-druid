@@ -20,9 +20,12 @@
 *.tar.gz
 *.rar
 
-/.idea
-/spring-boot-demo-mybatis-druid.iml
+.idea/
+.idea/*
+/*.iml
+spring-boot-demo-mybatis-druid-swagger.iml
 /target/
 
 将删除 .gitignore
 将删除 src/test/
+将删除 spring-boot-demo-mybatis-druid-swagger.iml
